@@ -90,6 +90,3 @@ To configure the bot you have to create config.ini file. If you don't know how y
 - DEBUG - Enables debugging options
 - NEVER_PREPROCESS_FILES - Convert files from data/responses to `.wav` format. Works with most of the commonly used formats
 - KEEP_PROCESSED_FILES - Don't delete files after preprocessing
-
-## Next steps
-For proof of concept, I’ve created a very simple presence answering app, but you can create a much more engaging and interactive app. If you have any ideas/problems open issue
