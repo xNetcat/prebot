@@ -84,7 +84,7 @@ To configure the bot you have to create config.ini file. If you don't know how y
 - OUTPUT_DEVICE_INDEX - Is an integer that represents an Virtual audio cable microphone. If `device_index` is unspecified, the default microphone is used as the audio source
 - ADJUST_FOR_AMBIENT_NOISE - Intended to calibrate the energy threshold with the ambient energy level
 - LANGUAGE - The recognition language is determined by language, an RFC5646 language tag like `en-US` or `en-GB`
-- NAMES - List of names that poeple call you 
+- NAMES - List of names that people call you 
 
 #### OTHER
 - DEBUG - Enables debugging options
