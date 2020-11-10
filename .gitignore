@@ -12,6 +12,7 @@ config.ini
 
 # unrecognized text 
 # it may contain private info so we dont want to push to to github
+unrecognized-text.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
