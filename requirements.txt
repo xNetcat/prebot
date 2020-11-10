@@ -1,0 +1,5 @@
+wave
+wit
+pydub
+speech_recognition
+pyaudio
