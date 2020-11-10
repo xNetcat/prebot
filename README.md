@@ -1,5 +1,7 @@
 # prebot
 
+Bot that can respond to someone asking if you are present. It's not that advanced so please use with caution
+
 ## Requirements
 
 #### Python
@@ -21,6 +23,11 @@
 
 ## How to run the bot
 After providing configuration just execute `python main.py`
+
+## Audio files
+For bot to operate you have to record yourself and put it in the data folder. For example `hello.mp3` file should be placed in `data/responses/presence_check/hello.mp3`
+
+Audio files should be in .wav format but if you don't know how to convert them make sure that option `PREPROCESS_FILES` is set to `yes` in config file
 
 ## Installation
 
