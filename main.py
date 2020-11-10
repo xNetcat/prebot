@@ -7,7 +7,7 @@ import time
 if __name__ == "__main__":
     # config file parser initialization
     config = configparser.ConfigParser()
-    config.read("config.ini")
+    config.read("config.ini", encoding="utf-8")
 
     # custom logging format
     logging.basicConfig(
@@ -34,10 +34,12 @@ if __name__ == "__main__":
         ),
         names=config["SPEECH_RECOGNITION"].get("NAMES", "user,username"),
     )
-    if config["OTHER"].getboolean("NEVER_PREPROCESS_FILES") == False:
+    if config["OTHER"].getboolean("PREPROCESS_FILES", fallback=True) == True:
         bot.preprocess_files(
             keep_files=config["OTHER"].getboolean("KEEP_PROCESSED_FILES", fallback=True)
         )
+    logging.debug("Config:\n")
+    logging.debug({section: dict(config.items(section)) for section in config.sections()})
     bot.start()
 
     # never ending loop so our bot keeps running
