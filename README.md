@@ -62,7 +62,26 @@ After providing configuration just execute `python main.py`
 
 To configure the bot you have to create config.ini file. If you don't know how you can take a look at [example.config.ini](https://github.com/xNetcat/prebot/blob/main/example.config.ini)
 
-### Wit.ai training
+### WIT.AI
+
+* ACCESS_TOKEN - Go to your Wit.ai app Management > Settings and obtain the Client Access Token
+* CONFIDENCE_TRESHOLD - The higher you set your Confidence Threshold, the more accurate that Predict’s labeling will be. For example, a threshold of `0.05 is equal to a 95%` confidence threshold.
+
+### SPEECH_RECOGNITION
+
+* INPUT_DEVICE_INDEX - Is an integer that represents an Virtual audio cable speakers. If `device_index` is unspecified, the default microphone is used as the audio source
+* OUTPUT_DEVICE_INDEX - Is an integer that represents an Virtual audio cable microphone. If `device_index` is unspecified, the default microphone is used as the audio source
+* ADJUST_FOR_AMBIENT_NOISE - Intended to calibrate the energy threshold with the ambient energy level
+* LANGUAGE - The recognition language is determined by language, an RFC5646 language tag like `en-US` or `en-GB`
+* NAMES - List of names that people call you
+
+### OTHER
+
+* DEBUG - Enables debugging options
+* NEVER_PREPROCESS_FILES - Convert files from data/responses to `.wav` format. Works with most of the commonly used formats
+* KEEP_PROCESSED_FILES - Don't delete files after preprocessing
+
+## Wit.ai training
 
 1. Go to [Wit.ai](https://wit.ai/).
 2. Create a new Wit.ai app:
@@ -83,22 +102,3 @@ To configure the bot you have to create config.ini file. If you don't know how y
 ![Training gif](https://raw.githubusercontent.com/xNetcat/prebot/main/docs/wit_training.gif)
 
 Replace _Elon_ with _your name_
-
-### WIT.AI
-
-* ACCESS_TOKEN - Go to your Wit.ai app Management > Settings and obtain the Client Access Token
-* CONFIDENCE_TRESHOLD - The higher you set your Confidence Threshold, the more accurate that Predict’s labeling will be. For example, a threshold of `0.05 is equal to a 95%` confidence threshold.
-
-### SPEECH_RECOGNITION
-
-* INPUT_DEVICE_INDEX - Is an integer that represents an Virtual audio cable speakers. If `device_index` is unspecified, the default microphone is used as the audio source
-* OUTPUT_DEVICE_INDEX - Is an integer that represents an Virtual audio cable microphone. If `device_index` is unspecified, the default microphone is used as the audio source
-* ADJUST_FOR_AMBIENT_NOISE - Intended to calibrate the energy threshold with the ambient energy level
-* LANGUAGE - The recognition language is determined by language, an RFC5646 language tag like `en-US` or `en-GB`
-* NAMES - List of names that people call you
-
-### OTHER
-
-* DEBUG - Enables debugging options
-* NEVER_PREPROCESS_FILES - Convert files from data/responses to `.wav` format. Works with most of the commonly used formats
-* KEEP_PROCESSED_FILES - Don't delete files after preprocessing
