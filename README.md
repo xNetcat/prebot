@@ -34,13 +34,15 @@ After providing configuration just execute `python main.py`
 
 ## Installation
 
+### Downloading and installing requirements
+
 1. Download and unpack the bot from [here](https://github.com/xNetcat/teams-bot/archive/main.zip) or git clone the repo
 2. `pip3 install -r requirements.txt`
 3. if you have troubles installing pyaudio check next section
 
-## Pyaudio installation
+### Pyaudio installation
 
-### Windows
+#### Windows
 
 1. check your python version with `python -V`
 2. Download the wheel on this site <https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio>
@@ -52,7 +54,7 @@ After providing configuration just execute `python main.py`
 * For 64 bit `pip install PyAudio‑0.2.11‑cp39‑cp39‑win_amd64.whl`
 * For 32 bit `pip install PyAudio‑0.2.11‑cp39‑cp39‑win32.whl`
 
-### Linux
+#### Linux
 
 1. `sudo apt-get install python3-pyaudio`
 
