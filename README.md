@@ -80,7 +80,7 @@ To configure the bot you have to create config.ini file. If you don't know how y
     3. Click **Create Intent**.
 5. Submit your first utterance by clicking **Train and Validate**. The training should start within a few seconds - you can see the training status in the top right.
 
-![Training gif](https://github.com/xNetcat/prebot/blob/master/docs/wit_training.gif)
+![Training gif](https://raw.githubusercontent.com/xNetcat/prebot/main/docs/wit_training.gif)
 
 Replace _Elon_ with _your name_
 
