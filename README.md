@@ -4,17 +4,17 @@ Bot that can respond to someone asking if you are present. It's not that advance
 
 ## Requirements
 
-#### Python
+### Python
 
 * Only python3 is supported
 
-#### Virtual audio cable
+### Virtual audio cable
 
 * [VB-Cable](https://vb-audio.com/Cable/)
 * [Virtual Audio Cable (Vac)](https://vac.muzychenko.net/en/)
-* or any other program that forwards audio from input to output 
+* or any other program that forwards audio from input to output
 
-#### Python libraries
+### Python libraries
 
 * `wave`
 * `speech_recognition`
@@ -22,14 +22,15 @@ Bot that can respond to someone asking if you are present. It's not that advance
 * `pydub`
 * `pyaudio`
 
-## How to run the bot
-After providing configuration just execute `python main.py`
-
-## Audio files
+### Audio files
 
 For bot to operate you have to record yourself and put it in the data folder. For example `hello.mp3` file should be placed in `data/responses/presence_check/hello.mp3`
 
 Audio files should be in .wav format but if you don't know how to convert them make sure that option `PREPROCESS_FILES` is set to `yes` in config file
+
+## How to run the bot
+
+After providing configuration just execute `python main.py`
 
 ## Installation
 
@@ -37,9 +38,9 @@ Audio files should be in .wav format but if you don't know how to convert them m
 2. `pip3 install -r requirements.txt`
 3. if you have troubles installing pyaudio check next section
 
-#### Pyaudio installation
+## Pyaudio installation
 
-##### Windows
+### Windows
 
 1. check your python version with `python -V`
 2. Download the wheel on this site <https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio>
@@ -51,11 +52,15 @@ Audio files should be in .wav format but if you don't know how to convert them m
 * For 64 bit `pip install PyAudio‑0.2.11‑cp39‑cp39‑win_amd64.whl`
 * For 32 bit `pip install PyAudio‑0.2.11‑cp39‑cp39‑win32.whl`
 
-##### Linux
+### Linux
 
 1. `sudo apt-get install python3-pyaudio`
 
-## Wit.ai training
+## Configuration
+
+To configure the bot you have to create config.ini file. If you don't know how you can take a look at [example.config.ini](https://github.com/xNetcat/prebot/blob/main/example.config.ini)
+
+### Wit.ai training
 
 1. Go to [Wit.ai](https://wit.ai/).
 2. Create a new Wit.ai app:
@@ -77,16 +82,12 @@ Audio files should be in .wav format but if you don't know how to convert them m
 
 Replace _Elon_ with _your name_
 
-## Configuration
-
-To configure the bot you have to create config.ini file. If you don't know how you can take a look at [example.config.ini](https://github.com/xNetcat/prebot/blob/main/example.config.ini)
-
-#### WIT.AI
+### WIT.AI
 
 * ACCESS_TOKEN - Go to your Wit.ai app Management > Settings and obtain the Client Access Token
 * CONFIDENCE_TRESHOLD - The higher you set your Confidence Threshold, the more accurate that Predict’s labeling will be. For example, a threshold of `0.05 is equal to a 95%` confidence threshold.
 
-#### SPEECH_RECOGNITION
+### SPEECH_RECOGNITION
 
 * INPUT_DEVICE_INDEX - Is an integer that represents an Virtual audio cable speakers. If `device_index` is unspecified, the default microphone is used as the audio source
 * OUTPUT_DEVICE_INDEX - Is an integer that represents an Virtual audio cable microphone. If `device_index` is unspecified, the default microphone is used as the audio source
@@ -94,7 +95,7 @@ To configure the bot you have to create config.ini file. If you don't know how y
 * LANGUAGE - The recognition language is determined by language, an RFC5646 language tag like `en-US` or `en-GB`
 * NAMES - List of names that people call you
 
-#### OTHER
+### OTHER
 
 * DEBUG - Enables debugging options
 * NEVER_PREPROCESS_FILES - Convert files from data/responses to `.wav` format. Works with most of the commonly used formats
