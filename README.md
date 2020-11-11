@@ -70,6 +70,8 @@ Audio files should be in .wav format but if you don't know how to convert them m
     3. Click **Create Intent**.
 5. Submit your first utterance by clicking **Train and Validate**. The training should start within a few seconds - you can see the training status in the top right.
 
+![Training gif](https://github.com/xNetcat/prebot/blob/master/docs/wit_training.gif)
+
 Replace _Elon_ with _your name_
 
 ## Configuration
