@@ -5,6 +5,7 @@ Bot that can respond to someone asking if you are present. It's not that advance
 ## Requirements
 
 #### Python
+
 * Only python3 is supported
 
 #### Virtual audio cable
@@ -25,6 +26,7 @@ Bot that can respond to someone asking if you are present. It's not that advance
 After providing configuration just execute `python main.py`
 
 ## Audio files
+
 For bot to operate you have to record yourself and put it in the data folder. For example `hello.mp3` file should be placed in `data/responses/presence_check/hello.mp3`
 
 Audio files should be in .wav format but if you don't know how to convert them make sure that option `PREPROCESS_FILES` is set to `yes` in config file
@@ -37,14 +39,15 @@ Audio files should be in .wav format but if you don't know how to convert them m
 
 #### Pyaudio installation
 
-##### Windows 
+##### Windows
 
 1. check your python version with `python -V`
-2. Download the wheel on this site https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio
+2. Download the wheel on this site <https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio>
 3. Choose version that matches your python version for example I use python 3.9 so I will select `PyAudio‑0.2.11‑cp39‑cp39‑win_amd64.whl`
 4. Choose `PyAudio‑0.2.11‑cp39‑cp39‑win32.whl` if you use 32 bit, or `PyAudio‑0.2.11‑cp39‑cp39‑win_amd64.whl` for 64 bit
 5. Then go to your downloads folder
 6. And install it with pip
+
 * For 64 bit `pip install PyAudio‑0.2.11‑cp39‑cp39‑win_amd64.whl`
 * For 32 bit `pip install PyAudio‑0.2.11‑cp39‑cp39‑win32.whl`
 
@@ -62,8 +65,8 @@ Audio files should be in .wav format but if you don't know how to convert them m
     4. Click **Create**.
 3. Add an utterance:
     1. Make sure you are on the **Train Your App** page by selecting **Understanding** from the left-hand menu.
-    1. Type _Are you here Elon?_ into the **Utterance** text box.
-    2. Label an entity in the utterance by highlighting _Elon_ with your mouse and select `wit/contact` as the Entity type.
+    2. Type _Are you here Elon?_ into the **Utterance** text box.
+    3. Label an entity in the utterance by highlighting _Elon_ with your mouse and select `wit/contact` as the Entity type.
 4. Add an intent
     1. Click on the **Intent** dropdown.
     2. Enter _presence_check_ as the name of your new Intent.
@@ -76,19 +79,23 @@ Replace _Elon_ with _your name_
 
 ## Configuration
 
-To configure the bot you have to create config.ini file. If you don't know how you can take a look at [example.config.ini](https://github.com/xNetcat/teams-bot/blob/main/example.config.ini)
+To configure the bot you have to create config.ini file. If you don't know how you can take a look at [example.config.ini](https://github.com/xNetcat/prebot/blob/main/example.config.ini)
 
 #### WIT.AI
-- ACCESS_TOKEN - Go to your Wit.ai app Management > Settings and obtain the Client Access Token
-- CONFIDENCE_TRESHOLD - The higher you set your Confidence Threshold, the more accurate that Predict’s labeling will be. For example, a threshold of `0.05 is equal to a 95%` confidence threshold.
+
+* ACCESS_TOKEN - Go to your Wit.ai app Management > Settings and obtain the Client Access Token
+* CONFIDENCE_TRESHOLD - The higher you set your Confidence Threshold, the more accurate that Predict’s labeling will be. For example, a threshold of `0.05 is equal to a 95%` confidence threshold.
+
 #### SPEECH_RECOGNITION
-- INPUT_DEVICE_INDEX - Is an integer that represents an Virtual audio cable speakers. If `device_index` is unspecified, the default microphone is used as the audio source 
-- OUTPUT_DEVICE_INDEX - Is an integer that represents an Virtual audio cable microphone. If `device_index` is unspecified, the default microphone is used as the audio source
-- ADJUST_FOR_AMBIENT_NOISE - Intended to calibrate the energy threshold with the ambient energy level
-- LANGUAGE - The recognition language is determined by language, an RFC5646 language tag like `en-US` or `en-GB`
-- NAMES - List of names that people call you 
+
+* INPUT_DEVICE_INDEX - Is an integer that represents an Virtual audio cable speakers. If `device_index` is unspecified, the default microphone is used as the audio source
+* OUTPUT_DEVICE_INDEX - Is an integer that represents an Virtual audio cable microphone. If `device_index` is unspecified, the default microphone is used as the audio source
+* ADJUST_FOR_AMBIENT_NOISE - Intended to calibrate the energy threshold with the ambient energy level
+* LANGUAGE - The recognition language is determined by language, an RFC5646 language tag like `en-US` or `en-GB`
+* NAMES - List of names that people call you
 
 #### OTHER
-- DEBUG - Enables debugging options
-- NEVER_PREPROCESS_FILES - Convert files from data/responses to `.wav` format. Works with most of the commonly used formats
-- KEEP_PROCESSED_FILES - Don't delete files after preprocessing
+
+* DEBUG - Enables debugging options
+* NEVER_PREPROCESS_FILES - Convert files from data/responses to `.wav` format. Works with most of the commonly used formats
+* KEEP_PROCESSED_FILES - Don't delete files after preprocessing
