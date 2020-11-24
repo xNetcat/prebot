@@ -1,6 +1,7 @@
 # prebot
 
-Bot that can respond to someone asking if you are present. It's not that advanced so please use with caution
+Bot that can respond to someone asking if you are present in the class.
+It's not that advanced so please use with caution
 
 ## Requirements
 
